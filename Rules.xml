@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='utf-8'?>
+<document>
+    <rule name="Vriska" color="#005682">
+        <alias value="AG"/>
+        <quirk from="[bB]" to="8"/>
+        <quirk from=":" to="::::"/>
+        <dequirk from="::::" to=":"/>
+    </rule>
+    <rule name="Terezi" color="#008282">
+        <alias value="GC"/>
+        <alias value="TEREZI"/>
+        <quirk from="[aA]" to="4"/>
+        <quirk from="[iI]" to="1"/>
+        <quirk from="[eE]" to="3"/>
+        <dequirk from="0" to="o"/>
+    </rule>
+</document>
