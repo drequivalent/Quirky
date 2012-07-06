@@ -6,6 +6,11 @@
         <quirk from=":" to="::::"/>
         <dequirk from="::::" to=":"/>
     </rule>
+    <rule name="Karkat" color="#696969">
+        <alias value="CG"/>
+        <quirk from="(.)" to="\1"/>
+        <dequirk from="[A-Z]" to="[a-z]"/>
+    </rule>
     <rule name="Terezi" color="#008282">
         <alias value="GC"/>
         <alias value="TEREZI"/>

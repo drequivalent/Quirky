@@ -143,12 +143,12 @@ class Rule:
         else:
             raise TypeError("regexp must be a string.")
     
-    def set_replacer(self, regexp):
-        """Sets a regular expression to replace with. Takes one argument which must be a string. If it's not the case, raises a TypeError exception."""
-        if type(regexp) == str:
-            self.replacewith = regexp
+    def set_replacer(self, replacer):
+        """Sets a string to replace with. Takes one argument which must be a string. If it's not the case, raises a TypeError exception."""
+        if type(replacer) == str:
+            self.replacewith = replacer
         else:
-            raise TypeError("regexp must be a string.")
+            raise TypeError("replacer must be a string.")
     
     def get_regexp(self):
         """Returns a regular expression to look for. Takes no arguments."""
@@ -269,3 +269,10 @@ def quirks_to_xml(source, nice = True):
             return xml_string
     else:
         raise TypeError("source argument must contain only TypingQuirk instances.")
+
+
+def test():
+    qdict = create_quirks_dict_from_file("Rules.xml")
+    return qdict["Karkat"].quirkify("Quick brown fox jumps over the lazy dog")
+
+print(test())
