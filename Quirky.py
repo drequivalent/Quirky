@@ -249,4 +249,4 @@ def quirks_to_xml(source, nice = True):
         else:
             return xml_string
     else:
-        raise TypeError("source argument must contain only TypingQuirk instances")
+        raise TypeError("source argument must contain only TypingQuirk instances.")
