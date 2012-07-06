@@ -12,12 +12,15 @@
 #  along with this program; if not, write to the Free Software
 #  Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston,
 #  MA 02110-1301, USA.
+#  
+#  Homestuck Russian Translation Project
+#  <xmpp:homestuck@conference.jabber.ru>
 #  dr.Equivalent the Incredible <dr.equivalent@yandex.ru>
 
 """A module for working with Typing Quirk regular expressions.
 
 The regular expressions for quirkification and dequirkification are defined by simple XML format. See documentation for particular class or function to learn more.
-Written for Homestuck Translation Project."""
+Written for Homestuck Russian Translation Project."""
 
 import re
 from xml.etree import ElementTree
