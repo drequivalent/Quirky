@@ -12,6 +12,8 @@
         <quirk from="[aA]" to="4"/>
         <quirk from="[iI]" to="1"/>
         <quirk from="[eE]" to="3"/>
-        <dequirk from="0" to="o"/>
+        <dequirk from="4" to="a"/>
+        <dequirk from="1" to="i"/>
+        <dequirk from="3" to="e"/>
     </rule>
 </document>
