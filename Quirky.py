@@ -275,4 +275,5 @@ def test():
     qdict = create_quirks_dict_from_file("Rules.xml")
     return qdict["Karkat"].quirkify("Quick brown fox jumps over the lazy dog")
 
-print(test())
+if __name__ == "__main__":
+    print test()
