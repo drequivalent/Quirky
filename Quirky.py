@@ -278,9 +278,13 @@ def test():
 if __name__ == "__main__":
     import argparse, sys
     parser = argparse.ArgumentParser(description='Apply a typing quirk to stdin, write to stdout.')
-    parser.add_argument('-q,--quirk', dest='quirk')
+    parser.add_argument('-q,--quirk', dest='quirk', help='choose a particular typing quirk')
+    parser.add_argument('-r,--rules', dest='rules', help='use your own typing quirks description file')
     args = parser.parse_args()
-    qdict = create_quirks_dict_from_file("Rules.xml")
+    if args.rules:
+        qdict = create_quirks_dict_from_file(args.rules)
+    else:
+        qdict = create_quirks_dict_from_file("Rules.xml")
     quirk = qdict[args.quirk]
     for line in sys.stdin:
         sys.stdout.write(quirk.quirkify(line))
