@@ -276,4 +276,11 @@ def test():
     return qdict["Karkat"].quirkify("Quick brown fox jumps over the lazy dog")
 
 if __name__ == "__main__":
-    print test()
+    import argparse, sys
+    parser = argparse.ArgumentParser(description='Apply a typing quirk to stdin, write to stdout.')
+    parser.add_argument('-q,--quirk', dest='quirk')
+    args = parser.parse_args()
+    qdict = create_quirks_dict_from_file("Rules.xml")
+    quirk = qdict[args.quirk]
+    for line in sys.stdin:
+        sys.stdout.write(quirk.quirkify(line))
